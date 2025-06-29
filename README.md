@@ -42,11 +42,15 @@ _A Telegram bot to scrape and filter links from URLs or text files with powerful
 - Shows filtered vs. total link count  
 
 ### 🛠 **Commands**  
-| Command | Description |  
-|---------|-------------|  
-| `/start` | Welcome guide |  
-| `/help` | Detailed instructions |  
-| `/status` | Show active filters & stats |  
+
+| Command       | Description                                  | Example Usage                     |
+|---------------|----------------------------------------------|-----------------------------------|
+| `/start`      | Show welcome message & quick-start guide     | `/start`                          |
+| `/help`       | Display detailed instructions & examples     | `/help`                           |
+| `/include`    | Whitelist links containing keywords         | `/include python,telegram,bot`    |
+| `/exclude`    | Blacklist links containing keywords         | `/exclude ads,tracking`           |
+| `/reset`      | Clear ALL filters and collected links       | `/reset`                          |
+| `/status`     | Show active filters + link counts           | `/status`                         |
 
 ## 🚀 **Tech Stack**  
 - Python + `python-telegram-bot`  
