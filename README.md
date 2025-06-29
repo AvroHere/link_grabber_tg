@@ -17,7 +17,7 @@ _A Telegram bot to scrape and filter links from URLs or text files with powerful
 
 3. 💾 **Installation**
 # Clone the repository
-git clone https://github.com/AvroHere/link-grabber-bot.git
+git clone https://github.com/AvroHere/link_grabber_tg
 cd link-grabber-bot
 
 # Install dependencies
