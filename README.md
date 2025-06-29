@@ -16,58 +16,44 @@ _A Telegram bot to scrape and filter links from URLs or text files with powerful
 - ⚙️ **Session Management**: Automatic cleanup of inactive sessions
 
 
-✨ Features
-🌐 URL Scraping
+### 🔗 **Input Handling**  
+- Accepts direct URLs (`http://`/`https://`)  
+- Processes `.txt` files with multiple URLs (one per line)  
+- Auto-validates URLs before processing  
 
-Scrape links from direct URLs or .txt file uploads
+### 🔍 **Smart Filtering**  
+- `/include python,web` → Whitelist links containing keywords  
+- `/exclude ads,tracking` → Blacklist links with keywords  
+- Case-insensitive matching  
 
-Supports http:// and https:// validation
+### 💾 **Session Management**  
+- User-specific isolated sessions  
+- `/reset` → Clear all filters & collected links  
+- Auto-cleanup after 1h inactivity  
 
-🔍 Smart Filtering
+### ⚡ **Performance**  
+- Concurrent scraping (8 threads)  
+- Real-time progress updates  
+- Processing lock to prevent duplicates  
 
-/include keyword1,keyword2 → Whitelist links by keywords
+### 📤 **Output**  
+- Generates downloadable `.txt` files  
+- Clean naming (`filtered_links_25.txt`)  
+- Shows filtered vs. total link count  
 
-/exclude keyword3,keyword4 → Blacklist links by keywords
+### 🛠 **Commands**  
+| Command | Description |  
+|---------|-------------|  
+| `/start` | Welcome guide |  
+| `/help` | Detailed instructions |  
+| `/status` | Show active filters & stats |  
 
-Case-insensitive matching
+## 🚀 **Tech Stack**  
+- Python + `python-telegram-bot`  
+- `BeautifulSoup` for scraping  
+- ThreadPoolExecutor for concurrency  
 
-📂 Session Management
-
-Isolated per-user sessions
-
-Auto-reset after 1 hour of inactivity
-
-/reset → Clear all filters & data
-
-📊 Progress Tracking
-
-Real-time updates during scraping
-
-Concurrent processing (8 threads)
-
-📤 Downloadable Results
-
-Filtered links delivered as .txt files
-
-Clean filename with link count (e.g., filtered_links_42.txt)
-
-🛟 User-Friendly UX
-
-/help → Detailed guide with examples
-
-/status → Check active filters & link counts
-
-Error handling with plain-English replies
-
-⚡ Tech Stack
-
-Python + python-telegram-bot
-
-BeautifulSoup for scraping
-
-ThreadPoolExecutor for concurrency
-
-
+**Ideal for**: Web research, SEO, or archiving! 
 
 3. 💾 **Installation**
 # Clone the repository
