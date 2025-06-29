@@ -20,7 +20,7 @@ from telegram.ext import (
 )
 
 # Configuration
-BOT_TOKEN = "7871981850:AAFBaqcZmkewtwKTarXlZi6yHWzi31j7PSA"  # Replace with your actual bot token
+BOT_TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # Replace with your actual bot token
 MAX_WORKERS = 8
 SESSION_TIMEOUT_SECONDS = 3600  # 1 hour
 
