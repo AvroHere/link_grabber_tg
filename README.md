@@ -16,108 +16,57 @@ _A Telegram bot to scrape and filter links from URLs or text files with powerful
 - ⚙️ **Session Management**: Automatic cleanup of inactive sessions
 
 
+✨ Features
+🌐 URL Scraping
 
-🌐 Link Grabber Bot - Core Features
+Scrape links from direct URLs or .txt file uploads
 
-🔗 URL Processing
+Supports http:// and https:// validation
 
-Accepts direct URL messages (http/https)
+🔍 Smart Filtering
 
-Processes .txt file uploads with multiple URLs (one per line)
+/include keyword1,keyword2 → Whitelist links by keywords
 
-Validates URLs before processing
+/exclude keyword3,keyword4 → Blacklist links by keywords
 
-⚙️ Filter System
+Case-insensitive matching
 
-/include keyword1,keyword2 - Whitelist links containing these keywords
+📂 Session Management
 
-/exclude keyword3,keyword4 - Blacklist links containing these keywords
+Isolated per-user sessions
 
-Case-insensitive keyword matching
+Auto-reset after 1 hour of inactivity
 
-Real-time filter updates with confirmation
+/reset → Clear all filters & data
 
-📊 Session Management
+📊 Progress Tracking
 
-Per-user isolated sessions
+Real-time updates during scraping
 
-Auto-cleanup after 1 hour of inactivity
+Concurrent processing (8 threads)
 
-/reset - Clear all filters and collected links
+📤 Downloadable Results
 
-/status - View current filters and link counts
+Filtered links delivered as .txt files
 
-🔄 Processing Workflow
+Clean filename with link count (e.g., filtered_links_42.txt)
 
-User sets filters (optional)
+🛟 User-Friendly UX
 
-Provides URLs via message or file
+/help → Detailed guide with examples
 
-Bot:
+/status → Check active filters & link counts
 
-Shows real-time progress updates
+Error handling with plain-English replies
 
-Scrapes links concurrently (8 threads)
+⚡ Tech Stack
 
-Applies active filters
+Python + python-telegram-bot
 
-Compiles results into downloadable .txt file
+BeautifulSoup for scraping
 
-📤 Output Delivery
+ThreadPoolExecutor for concurrency
 
-Sends filtered links as a downloadable text file
-
-Includes count of matching links
-
-Cleans up temporary files after sending
-
-🆘 Help System
-
-/start - Quick-start guide
-
-/help - Detailed instructions with examples
-
-Error handling with user-friendly messages
-
-⚡ Performance Features
-
-Threaded scraping for multiple URLs
-
-Progress updates during long operations
-
-Processing locks prevent duplicate work
-
-Example Interactive Flow:
-
-User: /include python,code
-
-Bot: "✅ Include filters updated: python, code"
-
-User: Sends "https://example.com"
-
-Bot:
-
-"🔗 URL received. Starting scrape..."
-
-Progress updates...
-
-Sends file: "✅ Found 24 filtered links" (filtered_links_24.txt)
-
-Supported Commands:
-
-/start - Welcome message
-
-/help - Detailed guide
-
-/include - Set whitelist
-
-/exclude - Set blacklist
-
-/reset - Clear session
-
-/status - Current settings
-
-The bot maintains state between interactions until reset or timeout, allowing for iterative refinement of filters.
 
 
 3. 💾 **Installation**
