@@ -15,6 +15,111 @@ _A Telegram bot to scrape and filter links from URLs or text files with powerful
 - 🚀 **Concurrent Processing**: Fast scraping with thread pool execution
 - ⚙️ **Session Management**: Automatic cleanup of inactive sessions
 
+
+
+🌐 Link Grabber Bot - Core Features
+
+🔗 URL Processing
+
+Accepts direct URL messages (http/https)
+
+Processes .txt file uploads with multiple URLs (one per line)
+
+Validates URLs before processing
+
+⚙️ Filter System
+
+/include keyword1,keyword2 - Whitelist links containing these keywords
+
+/exclude keyword3,keyword4 - Blacklist links containing these keywords
+
+Case-insensitive keyword matching
+
+Real-time filter updates with confirmation
+
+📊 Session Management
+
+Per-user isolated sessions
+
+Auto-cleanup after 1 hour of inactivity
+
+/reset - Clear all filters and collected links
+
+/status - View current filters and link counts
+
+🔄 Processing Workflow
+
+User sets filters (optional)
+
+Provides URLs via message or file
+
+Bot:
+
+Shows real-time progress updates
+
+Scrapes links concurrently (8 threads)
+
+Applies active filters
+
+Compiles results into downloadable .txt file
+
+📤 Output Delivery
+
+Sends filtered links as a downloadable text file
+
+Includes count of matching links
+
+Cleans up temporary files after sending
+
+🆘 Help System
+
+/start - Quick-start guide
+
+/help - Detailed instructions with examples
+
+Error handling with user-friendly messages
+
+⚡ Performance Features
+
+Threaded scraping for multiple URLs
+
+Progress updates during long operations
+
+Processing locks prevent duplicate work
+
+Example Interactive Flow:
+
+User: /include python,code
+
+Bot: "✅ Include filters updated: python, code"
+
+User: Sends "https://example.com"
+
+Bot:
+
+"🔗 URL received. Starting scrape..."
+
+Progress updates...
+
+Sends file: "✅ Found 24 filtered links" (filtered_links_24.txt)
+
+Supported Commands:
+
+/start - Welcome message
+
+/help - Detailed guide
+
+/include - Set whitelist
+
+/exclude - Set blacklist
+
+/reset - Clear session
+
+/status - Current settings
+
+The bot maintains state between interactions until reset or timeout, allowing for iterative refinement of filters.
+
+
 3. 💾 **Installation**
 # Clone the repository
 git clone https://github.com/AvroHere/link_grabber_tg
